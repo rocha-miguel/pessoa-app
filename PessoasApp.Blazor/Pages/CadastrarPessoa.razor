@@ -1,0 +1,98 @@
+﻿@page "/pessoas/cadastro";
+
+<h3>Cadastro de Pessoas</h3>
+
+<p>Inclua registros de pessoas no sistema.</p>
+
+<hr />
+
+@if (!string.IsNullOrEmpty(mensagemSucesso)) {
+
+    <div class="alert bg-success text-white">
+
+        <strong>Sucesso!</strong> @mensagemSucesso
+    </div>
+
+} else if (!string.IsNullOrEmpty(mensagemErro)) {
+
+    <div class="alert bg-danger">
+
+        <strong>Erro!</strong> @mensagemErro
+    </div>
+}
+
+<EditForm Model="@pessoaForm" OnValidSubmit="@OnSubmit">
+
+    <DataAnnotationsValidator />
+
+    <div class="form-floating mb-3">
+
+        <InputText class="form-control"
+                   @bind-Value="pessoaForm.Nome"
+                   placeholder="Nome" />
+
+        <label>Informe o nome:</label>
+
+        <div class="text-danger">
+            <ValidationMessage For="@(() => pessoaForm.Nome)" />
+        </div>
+    </div>
+
+    <div class="form-floating mb-3">
+        <InputText class="form-control"
+                   @bind-Value="pessoaForm.Email"
+                   placeholder="Email" />
+
+        <label>Informe o email:</label>
+
+        <div class="text-danger">
+            <ValidationMessage For="@(() => pessoaForm.Email)" />
+        </div>
+    </div>
+
+    <div class="mb-3 text-center">
+        <input type="submit" value="Realizar Cadastro" class="btn btn-primary btn-lg px-5">
+    </div>
+
+</EditForm>
+
+@using PessoasApp.Blazor.Forms
+
+@inject HttpClient Http
+
+@code {
+
+    private PessoaForm pessoaForm = new PessoaForm();
+
+    private string mensagemSucesso = string.Empty;
+    private string mensagemErro = string.Empty;
+
+    protected async Task OnSubmit() {
+
+        mensagemSucesso = string.Empty;
+        mensagemErro = string.Empty;
+
+        try {
+
+            var response = await Http.PostAsJsonAsync("api/pessoas", pessoaForm);
+
+            if (response.IsSuccessStatusCode) {
+
+                mensagemSucesso = "Pessoa cadastrada com sucesso.";
+                pessoaForm = new PessoaForm();
+
+            } else {
+
+                mensagemErro = "Não foi possível realizar o cadastro.";
+
+            }
+
+
+        } catch (Exception e) {
+
+            mensagemErro = "Falha ao cadastrar pessoa.";
+        }
+
+    }
+
+}

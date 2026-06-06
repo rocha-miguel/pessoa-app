@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Novo Perfil",
+    "Projects": [
+      {
+        "Path": "PessoasApp.Blazor\\PessoasApp.Blazor.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "PessoasApp.Api\\PessoasApp.Api.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

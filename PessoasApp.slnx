@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/1 - WEB/">
+    <Project Path="PessoasApp.Blazor/PessoasApp.Blazor.csproj" />
+  </Folder>
+  <Folder Name="/2 - API/">
+    <Project Path="PessoasApp.Api/PessoasApp.Api.csproj" />
+  </Folder>
+</Solution>

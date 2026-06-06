@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|c:\\users\\miguel\\onedrive\\cmd\\projetoscs\\pessoasapp\\pessoasapp.blazor\\pages\\cadastrarpessoa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|solutionrelative:pessoasapp.blazor\\pages\\cadastrarpessoa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CadastrarPessoa.razor",
+              "DocumentMoniker": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
+              "RelativeDocumentMoniker": "PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
+              "ToolTip": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
+              "RelativeToolTip": "PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-06T20:31:11.26Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

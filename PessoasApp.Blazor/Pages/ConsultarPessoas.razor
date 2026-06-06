@@ -1,0 +1,71 @@
+﻿@page "/";
+
+
+<h3>Consulta de Pessoas</h3>
+
+<p>Pesquise por pessoas cadastradas no sistema</p>
+
+<hr />
+
+<table class="mt-2 table table-sm table-striped table-hover">
+
+    <thead>
+        <tr>
+
+            <th>
+                Nome
+            </th>
+
+            <th>
+                Email
+            </th>
+
+            <th>
+                Cadastrado em
+            </th>
+
+            <th>
+                Ações
+            </th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+
+            <td>
+                Miguel Rocha
+            </td>
+
+            <td>
+                miguel@email.com
+            </td>
+
+            <td >
+                06/06/2026
+            </td>
+
+            <td>
+                <button class="btn btn-sm btn-outline-primary me-2">Editar</button>
+                <button class="btn btn-sm btn-outline-danger me-2">Excluir</button>
+            </td>
+
+        </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+
+            <td colspan="4">
+                Quantidade de pessoas: 1
+            </td>
+
+        </tr>
+    </tfoot>
+
+</table>
+
+@code {
+
+}
