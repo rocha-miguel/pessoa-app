@@ -5,6 +5,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|c:\\users\\miguel\\onedrive\\cmd\\projetoscs\\pessoasapp\\pessoasapp.blazor\\pages\\cadastrarpessoa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|solutionrelative:pessoasapp.blazor\\pages\\cadastrarpessoa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|c:\\users\\miguel\\onedrive\\cmd\\projetoscs\\pessoasapp\\pessoasapp.blazor\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|solutionrelative:pessoasapp.blazor\\models\\pessoa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|c:\\users\\miguel\\onedrive\\cmd\\projetoscs\\pessoasapp\\pessoasapp.blazor\\pages\\consultarpessoas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDA372C1-791A-DCFF-A942-FE06E1C40295}|PessoasApp.Blazor\\PessoasApp.Blazor.csproj|solutionrelative:pessoasapp.blazor\\pages\\consultarpessoas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,9 +44,35 @@
               "RelativeDocumentMoniker": "PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
               "ToolTip": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
               "RelativeToolTip": "PessoasApp.Blazor\\Pages\\CadastrarPessoa.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-06T20:31:11.26Z",
+              "WhenOpened": "2026-06-13T19:18:23.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pessoa.cs",
+              "DocumentMoniker": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Models\\Pessoa.cs",
+              "RelativeDocumentMoniker": "PessoasApp.Blazor\\Models\\Pessoa.cs",
+              "ToolTip": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Models\\Pessoa.cs",
+              "RelativeToolTip": "PessoasApp.Blazor\\Models\\Pessoa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T19:16:35.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConsultarPessoas.razor",
+              "DocumentMoniker": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Pages\\ConsultarPessoas.razor",
+              "RelativeDocumentMoniker": "PessoasApp.Blazor\\Pages\\ConsultarPessoas.razor",
+              "ToolTip": "C:\\Users\\miguel\\OneDrive\\cmd\\projetoscs\\PessoasApp\\PessoasApp.Blazor\\Pages\\ConsultarPessoas.razor",
+              "RelativeToolTip": "PessoasApp.Blazor\\Pages\\ConsultarPessoas.razor",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T19:14:41.196Z",
               "EditorCaption": ""
             }
           ]

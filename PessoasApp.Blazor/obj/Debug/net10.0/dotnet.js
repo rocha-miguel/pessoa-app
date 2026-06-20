@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "PessoasApp.Blazor",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-Mq8eFC0Dw/X/ntk8O4tIgM5lee8Mh5b2EvOvV13Rmro=",
+    "hash": "sha256-+1XAeK7VD7eO2JPHX8mZP6N3cQ4AIe1FiU2QZIRuWQ8=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.rjbmzc4jpg.js"
@@ -1242,16 +1242,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "PessoasApp.Blazor.wasm",
-        "name": "PessoasApp.Blazor.izvav3tjcn.wasm",
-        "hash": "sha256-kkSiHbB7RxzFfGo284jHOWxEVhU3BDmOXLIoGy5adVc=",
+        "name": "PessoasApp.Blazor.bct5uxs88z.wasm",
+        "hash": "sha256-y+UvHX3H0+J6v0EuL4Kg7hB9td5t+tvVx0jDOiuMrEs=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "PessoasApp.Blazor.pdb",
-        "name": "PessoasApp.Blazor.kf3gppzonu.pdb",
-        "hash": "sha256-YGKqw0fFgVYuxnfe5ccNp+8ios5yFWsxXi+OQNRq/iE=",
+        "name": "PessoasApp.Blazor.44ecsi87eq.pdb",
+        "hash": "sha256-jMlXSKAveiCN+UAQm775XzhuZcdtm5CgRxx+/UPbH8o=",
         "cache": "force-cache"
       }
     ],

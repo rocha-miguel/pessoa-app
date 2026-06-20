@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PessoasApp.Api.Contexts;
 using PessoasApp.Api.Entities;
 using System.Linq.Expressions;
+using System.Text.Json;
 
 namespace PessoasApp.Api.Controllers {
     [Route("api/[controller]")]
     [ApiController]
-    public class PessoasController : ControllerBase {
+    public class PessoasController(ILogger<PessoasController> logger) : ControllerBase {
 
         private readonly DataContext _dataContext = new DataContext();
 
@@ -26,10 +28,51 @@ namespace PessoasApp.Api.Controllers {
                 await _dataContext.AddAsync(pessoa);
                 await _dataContext.SaveChangesAsync();
 
+                logger.LogInformation($"Pessoa cadastrada: {JsonSerializer.Serialize(pessoa)}");
 
                 return StatusCode(201, pessoa);
 
-            } catch (ApplicationException e) {
+            } catch (Exception e) {
+
+                logger.LogError("Falha ao cadastrar pessoa: " + e.Message);
+
+                return BadRequest(e.Message);
+
+            }
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> AtualizarParcialAsync(Guid id, [FromBody] PessoaDto dto) {
+
+            try {
+
+                var pessoa = await _dataContext.Pessoas.FindAsync(id);
+
+                if (pessoa == null) {
+
+                    return NotFound(new {
+                        mensagem = "Pessoa não encontrada."
+                    });
+                }
+
+                if (!string.IsNullOrEmpty(dto.Nome)) {
+                    pessoa.Nome = dto.Nome;
+                }
+
+                if (!string.IsNullOrEmpty(dto.Email)) {
+                    pessoa.Email = dto.Email;
+                }
+
+                _dataContext.Update(pessoa);
+                await _dataContext.SaveChangesAsync();
+
+                logger.LogInformation($"Pessoa atualizada: {JsonSerializer.Serialize(pessoa)}");
+
+                return StatusCode(200, pessoa);
+
+            } catch (Exception e) {
+
+                logger.LogError("Falha ao atualizar pessoa: " + e.Message);
 
                 return BadRequest(e.Message);
 
@@ -41,7 +84,7 @@ namespace PessoasApp.Api.Controllers {
 
             try {
 
-                var pessoa = _dataContext.Pessoas.Find(id);
+                var pessoa = await _dataContext.Pessoas.FindAsync(id);
 
                 if (pessoa == null) {
 
@@ -56,9 +99,13 @@ namespace PessoasApp.Api.Controllers {
                 _dataContext.Update(pessoa);
                 await _dataContext.SaveChangesAsync();
 
+                logger.LogInformation($"Pessoa atualizada: {JsonSerializer.Serialize(pessoa)}");
+
                 return Ok(pessoa);
 
-            } catch (ApplicationException e) {
+            } catch (Exception e) {
+
+                logger.LogError("Falha ao atualizar pessoa: " + e.Message);
 
                 return BadRequest(e.Message);
 
@@ -70,12 +117,19 @@ namespace PessoasApp.Api.Controllers {
 
             try {
 
-                var pessoas = _dataContext.Pessoas.ToList();
+                var pessoas = await _dataContext.Pessoas
+                    .AsNoTracking()
+                    .OrderBy(p => p.Nome)
+                    .ToListAsync();
+
+                logger.LogInformation($"Lista de pessoas: {JsonSerializer.Serialize(pessoas)}");
 
                 return Ok(pessoas);
 
 
-            } catch (ApplicationException e) {
+            } catch (Exception e) {
+
+                logger.LogError("Falha ao exibir pessoas: " + e.Message);
 
                 return BadRequest(e.Message);
 
@@ -87,7 +141,7 @@ namespace PessoasApp.Api.Controllers {
 
             try {
 
-                var pessoa = _dataContext.Pessoas.Find(id);
+                var pessoa = await _dataContext.Pessoas.FindAsync(id);
 
                 if (pessoa == null) {
 
@@ -96,9 +150,13 @@ namespace PessoasApp.Api.Controllers {
                     });
                 }
 
+                logger.LogInformation($"Pessoa exibida: {JsonSerializer.Serialize(pessoa)}");
+
                 return Ok(pessoa);
 
-            } catch (ApplicationException e) {
+            } catch (Exception e) {
+
+                logger.LogError("Falha ao exibir a pessoa informada: " + e.Message);
 
                 return BadRequest(e.Message);
             }
@@ -110,7 +168,7 @@ namespace PessoasApp.Api.Controllers {
 
             try {
 
-                var pessoa = _dataContext.Pessoas.Find(id);
+                var pessoa = await _dataContext.Pessoas.FindAsync(id);
 
                 if (pessoa == null) {
 
@@ -123,11 +181,15 @@ namespace PessoasApp.Api.Controllers {
                 _dataContext.Remove(pessoa);
                 await _dataContext.SaveChangesAsync();
 
+                logger.LogInformation($"Pessoa excluída com sucesso: {JsonSerializer.Serialize(pessoa)}");
+
                 return NoContent();
 
 
 
-            } catch (ApplicationException e) {
+            } catch (Exception e) {
+
+                logger.LogError("Falha ao excluir a pessoa informada: " + e.Message);
 
                 return BadRequest(e.Message);
             }

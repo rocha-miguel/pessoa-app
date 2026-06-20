@@ -1,4 +1,6 @@
 using Scalar.AspNetCore;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,15 @@ builder.Services.AddCors(options => {
     });
 });
 
+Log.Logger = new LoggerConfiguration()
+        .MinimumLevel
+        .Override("Microsoft", LogEventLevel.Warning)
+        .Enrich.FromLogContext()
+        .WriteTo.Console()
+        .WriteTo.Seq("http://localhost:5341")
+        .CreateLogger();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 

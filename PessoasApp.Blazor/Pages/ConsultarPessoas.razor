@@ -1,6 +1,7 @@
 ﻿@page "/";
 
 
+
 <h3>Consulta de Pessoas</h3>
 
 <p>Pesquise por pessoas cadastradas no sistema</p>
@@ -32,33 +33,41 @@
     </thead>
 
     <tbody>
-        <tr>
 
-            <td>
-                Miguel Rocha
-            </td>
+        @foreach (var p in pessoas) {
 
-            <td>
-                miguel@email.com
-            </td>
+            <tr>
 
-            <td >
-                06/06/2026
-            </td>
+                <td>
+                    @p.Nome
+                </td>
 
-            <td>
-                <button class="btn btn-sm btn-outline-primary me-2">Editar</button>
-                <button class="btn btn-sm btn-outline-danger me-2">Excluir</button>
-            </td>
+                <td>
+                    @p.Email
+                </td>
 
-        </tr>
+                <td>
+                    @p.DataCadastro.ToString("dd/MM/yyyy HH:mm")
+                </td>
+
+                <td>
+                    <button class="btn btn-sm btn-outline-primary me-2">Editar</button>
+                    <button class="btn btn-sm btn-outline-danger me-2">Excluir</button>
+                </td>
+
+            </tr>
+
+        }
+
+
+        
     </tbody>
 
     <tfoot>
         <tr>
 
             <td colspan="4">
-                Quantidade de pessoas: 1
+                Quantidade de pessoas: @pessoas.Count
             </td>
 
         </tr>
@@ -66,6 +75,17 @@
 
 </table>
 
+@using PessoasApp.Blazor.Models
+@inject HttpClient Http
+
 @code {
+
+    private List<Pessoa> pessoas = new();
+
+    protected override async Task OnInitializedAsync() {
+
+        pessoas = await Http.GetFromJsonAsync<List<Pessoa>>("api/pessoas") ?? new();
+
+    }
 
 }

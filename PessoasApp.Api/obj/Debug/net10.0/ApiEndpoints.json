@@ -27,6 +27,27 @@
   },
   {
     "ContainingType": "PessoasApp.Api.Controllers.PessoasController",
+    "Method": "AtualizarParcialAsync",
+    "RelativePath": "api/Pessoas/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "PessoasApp.Api.Controllers.PessoaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PessoasApp.Api.Controllers.PessoasController",
     "Method": "AtualizarAsync",
     "RelativePath": "api/Pessoas/{id}",
     "HttpMethod": "PUT",

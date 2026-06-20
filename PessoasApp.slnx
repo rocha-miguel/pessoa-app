@@ -5,4 +5,7 @@
   <Folder Name="/2 - API/">
     <Project Path="PessoasApp.Api/PessoasApp.Api.csproj" />
   </Folder>
+  <Folder Name="/Itens de Solução/">
+    <File Path="docker-compose.yml" />
+  </Folder>
 </Solution>

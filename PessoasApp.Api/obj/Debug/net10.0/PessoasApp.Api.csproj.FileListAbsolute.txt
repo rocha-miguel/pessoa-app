@@ -36,3 +36,15 @@ C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\obj\Debug\net1
 C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\obj\Debug\net10.0\PessoasApp.Api.pdb
 C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\obj\Debug\net10.0\PessoasApp.Api.genruntimeconfig.cache
 C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\obj\Debug\net10.0\ref\PessoasApp.Api.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.AspNetCore.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Sinks.File.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\bin\Debug\net10.0\Serilog.Sinks.Seq.dll
+C:\Users\miguel\OneDrive\cmd\projetoscs\PessoasApp\PessoasApp.Api\obj\Debug\net10.0\PessoasApp.Api.sourcelink.json

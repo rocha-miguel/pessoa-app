@@ -21,7 +21,7 @@
     </div>
 }
 
-<EditForm Model="@pessoaForm" OnValidSubmit="@OnSubmit">
+<EditForm Model="@pessoaForm" OnValidSubmit="@OnSubmitAsync">
 
     <DataAnnotationsValidator />
 
@@ -59,6 +59,7 @@
 @using PessoasApp.Blazor.Forms
 
 @inject HttpClient Http
+@inject NavigationManager Navigation
 
 @code {
 
@@ -67,7 +68,7 @@
     private string mensagemSucesso = string.Empty;
     private string mensagemErro = string.Empty;
 
-    protected async Task OnSubmit() {
+    protected async Task OnSubmitAsync() {
 
         mensagemSucesso = string.Empty;
         mensagemErro = string.Empty;
@@ -80,6 +81,8 @@
 
                 mensagemSucesso = "Pessoa cadastrada com sucesso.";
                 pessoaForm = new PessoaForm();
+
+                Navigation.NavigateTo("/");
 
             } else {
 
